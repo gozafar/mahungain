@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+:root {
+  --app-background: #ffffff;
+  --app-foreground: #0f172a;
+  --app-surface: #ffffff;
+  --app-border: #dbeafe;
+  --app-primary: #1d4ed8;
+  --app-accent: #facc15;
+}
+
+@theme inline {
+  --color-background: var(--app-background);
+  --color-foreground: var(--app-foreground);
+  --color-surface: var(--app-surface);
+  --color-border: var(--app-border);
+  --color-primary: var(--app-primary);
+  --color-accent: var(--app-accent);
+  --font-sans: ui-sans-serif, system-ui, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+body {
+  background: var(--color-background);
+  color: var(--color-foreground);
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
