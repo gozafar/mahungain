@@ -54,7 +54,7 @@ export function Footer() {
             />
           </div>
           <p className="mt-5 max-w-sm text-sm leading-7 text-white/65 sm:text-base sm:leading-8">
-            Mahugain Public School, Parsabad is a co-educational English medium school offering quality education from Nursery to Class X.
+            Mahugain Public School, Markacho is a co-educational English medium school offering quality education from Nursery to Class X.
           </p>
           <div className="mt-6 flex flex-wrap gap-3">
             {["JAC Affiliated", "English Medium", "Co-Educational"].map((item) => (
@@ -113,7 +113,17 @@ export function Footer() {
             <div className="flex flex-col gap-2 text-xs text-white/45 sm:flex-row sm:flex-wrap sm:items-center sm:justify-between sm:gap-4 sm:text-sm">
               <p>© 2026 {siteConfig.name}. All rights reserved.</p>
               <p>Affiliated to the Jharkhand Academic Council, Ranchi</p>
-              <p>Developed by FN-Concepts</p>
+              <p>
+                Developed by{" "}
+                <Link
+                  href="https://indotech-teal.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-semibold text-[#ffd86b] transition hover:text-[#ffdf5b]"
+                >
+                  Indo Tech
+                </Link>
+              </p>
             </div>
           </div>
           <div className="relative hidden min-h-[180px] overflow-hidden rounded-tl-[28px] rounded-tr-[0] rounded-bl-[0] rounded-br-[0] lg:block">

@@ -21,6 +21,118 @@ const academicCards = [
   { title: "Secondary", subtitle: "Class IX to X", color: "from-orange-500 to-amber-500", subjects: ["English", "Hindi", "Mathematics", "Science", "Social Science", "IT", "Sanskrit"] },
 ];
 
+const leadershipTeam = [
+  {
+    role: "Director",
+    name: "Director Name",
+    description: "Guides the school with long-term planning, quality standards, and overall development.",
+    accent: "bg-emerald-600",
+    initials: "DI",
+    photo: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=600&q=80",
+  },
+  {
+    role: "Principal",
+    name: "Principal Name",
+    description: "Provides academic leadership, discipline, and a strong vision for student success.",
+    accent: "bg-blue-600",
+    initials: "PR",
+    photo: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=600&q=80",
+  },
+];
+
+const teachingStaff = [
+  {
+    name: "Teacher Name",
+    subject: "Mathematics",
+    experience: "10+ years",
+    photo: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=500&q=80",
+  },
+  {
+    name: "Teacher Name",
+    subject: "English",
+    experience: "8+ years",
+    photo: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=500&q=80",
+  },
+  {
+    name: "Teacher Name",
+    subject: "Science",
+    experience: "7+ years",
+    photo: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=500&q=80",
+  },
+  {
+    name: "Teacher Name",
+    subject: "Social Studies",
+    experience: "6+ years",
+    photo: "https://images.unsplash.com/photo-1504593811423-6dd665756598?auto=format&fit=crop&w=500&q=80",
+  },
+  {
+    name: "Teacher Name",
+    subject: "Hindi",
+    experience: "9+ years",
+    photo: "https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?auto=format&fit=crop&w=500&q=80",
+  },
+  {
+    name: "Teacher Name",
+    subject: "Computer",
+    experience: "7+ years",
+    photo: "https://images.unsplash.com/photo-1503437313881-503a91226402?auto=format&fit=crop&w=500&q=80",
+  },
+  {
+    name: "Teacher Name",
+    subject: "English",
+    experience: "11+ years",
+    photo: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=500&q=80",
+  },
+  {
+    name: "Teacher Name",
+    subject: "Science",
+    experience: "8+ years",
+    photo: "https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=500&q=80",
+  },
+  {
+    name: "Teacher Name",
+    subject: "Mathematics",
+    experience: "12+ years",
+    photo: "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?auto=format&fit=crop&w=500&q=80",
+  },
+  {
+    name: "Teacher Name",
+    subject: "Sanskrit",
+    experience: "6+ years",
+    photo: "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=500&q=80",
+  },
+  {
+    name: "Teacher Name",
+    subject: "Art & Craft",
+    experience: "5+ years",
+    photo: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=500&q=80",
+  },
+  {
+    name: "Teacher Name",
+    subject: "Physical Education",
+    experience: "10+ years",
+    photo: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=500&q=80",
+  },
+  {
+    name: "Teacher Name",
+    subject: "EVS",
+    experience: "7+ years",
+    photo: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=500&q=80",
+  },
+  {
+    name: "Teacher Name",
+    subject: "Social Science",
+    experience: "9+ years",
+    photo: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=500&q=80",
+  },
+  {
+    name: "Teacher Name",
+    subject: "Music",
+    experience: "4+ years",
+    photo: "https://images.unsplash.com/photo-1504593811423-6dd665756598?auto=format&fit=crop&w=500&q=80",
+  },
+];
+
 const testimonials = [
   "Mahugain Public School has been a wonderful experience for my child.",
   "My daughter scored 95% in boards and we are very happy with the faculty.",
@@ -45,13 +157,13 @@ export default function Home() {
             src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1800&q=80"
             alt="School campus"
             fill
-            className="object-cover opacity-35"
+            className="object-cover opacity-35 animate-scale-in"
             priority
           />
           <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(126,7,7,0.6),rgba(126,7,7,0.72))]" />
         </div>
         <Container className="relative grid gap-10 py-16 lg:min-h-[780px] lg:grid-cols-[1.15fr_0.85fr] lg:py-24">
-          <div className="flex flex-col justify-center">
+          <div className="flex flex-col justify-center animate-fade-up">
             <Badge className="w-fit border-white/20 bg-white/10 text-white text-xs sm:text-sm">Excellence in Education</Badge>
             <h1 className="mt-6 max-w-3xl text-4xl font-black leading-tight tracking-tight sm:text-6xl lg:text-7xl">
               Mahugain Public School
@@ -68,10 +180,10 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="flex items-end justify-end">
+          <div className="flex items-end justify-end animate-fade-up">
             <div className="grid w-full max-w-md gap-4 sm:grid-cols-2 lg:grid-cols-1">
               {heroStats.map((stat) => (
-                <div key={stat.label} className="rounded-3xl border border-white/30 bg-white/10 px-5 py-5 backdrop-blur-sm sm:px-6 sm:py-6">
+                <div key={stat.label} className="hover-lift rounded-3xl border border-white/30 bg-white/10 px-5 py-5 backdrop-blur-sm sm:px-6 sm:py-6">
                   <div className="text-3xl font-black text-yellow-300 sm:text-4xl">{stat.value}</div>
                   <div className="mt-2 text-sm text-white/90 sm:text-lg">{stat.label}</div>
                 </div>
@@ -83,14 +195,14 @@ export default function Home() {
 
       <Section className="bg-white">
         <Container>
-          <div className="rounded-[32px] bg-white px-4 py-10 shadow-[0_40px_100px_rgba(0,0,0,0.06)] sm:px-6 sm:py-12 lg:rounded-[48px] lg:px-8 lg:py-16">
+          <div className="hover-lift rounded-[32px] bg-white px-4 py-10 shadow-[0_40px_100px_rgba(0,0,0,0.06)] sm:px-6 sm:py-12 lg:rounded-[48px] lg:px-8 lg:py-16">
               <SectionTitle
                 eyebrow="News & Resources"
                 title="Latest News & School Books"
                 description="Stay updated with school news and access textbooks from Nursery to Class X."
               />
             <div className="mt-10 grid gap-6 lg:grid-cols-[1fr_1fr] lg:gap-8">
-              <Card className="relative min-h-[260px] overflow-hidden bg-slate-50 sm:min-h-[320px] lg:min-h-[360px]">
+              <Card className="hover-lift relative min-h-[260px] overflow-hidden bg-slate-50 sm:min-h-[320px] lg:min-h-[360px]">
                 <Image
                   src="/student.png"
                   alt="Student"
@@ -104,7 +216,7 @@ export default function Home() {
                 <SectionTitle title="School Books" description="Nursery to Class X - Click Explore for PDFs" />
                 <div className="mt-6 grid gap-3 sm:gap-4">
                   {["Nursery", "LKG", "UKG", "Class 1", "Class 2", "Class 3", "Class 4", "Class 5", "Class 6", "Class 7", "Class 8", "Class 9", "Class 10"].map((item) => (
-                    <div key={item} className="flex items-center justify-between gap-3 rounded-2xl border border-slate-200 bg-white px-4 py-3 shadow-sm sm:px-5 sm:py-4">
+                    <div key={item} className="hover-lift flex items-center justify-between gap-3 rounded-2xl border border-slate-200 bg-white px-4 py-3 shadow-sm sm:px-5 sm:py-4">
                       <span className="min-w-0 flex-1 text-sm font-semibold text-slate-800 sm:text-lg">📘 {item}</span>
                       <Button className="shrink-0 rounded-full px-4 py-2 text-sm sm:px-5">Explore</Button>
                     </div>
@@ -116,30 +228,30 @@ export default function Home() {
         </Container>
       </Section>
 
-      <Section className="bg-slate-50">
+      <Section className="bg-slate-50" id="about">
         <Container>
           <SectionTitle eyebrow="About Us" title="About Mahugain Public School" />
           <div className="mt-10 grid gap-8 lg:grid-cols-[1.1fr_0.9fr]">
-            <div className="relative overflow-hidden rounded-[28px] bg-white shadow-lg sm:rounded-[32px]">
+            <div className="hover-lift relative overflow-hidden rounded-[28px] bg-white shadow-lg sm:rounded-[32px]">
               <Image src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=1400&q=80" alt="School office" width={1200} height={800} className="h-full w-full object-cover" />
               <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/75 to-transparent p-4 text-white sm:p-6">
-                <p className="text-xs text-yellow-300 sm:text-sm">Estd. 2022</p>
+                <p className="text-xs text-yellow-300 sm:text-sm">Established 2024</p>
                 <h3 className="text-xl font-black sm:text-3xl">{school.name}</h3>
                 <p className="text-sm text-white/80 sm:text-lg">Mahungain, Koderma, Jharkhand</p>
               </div>
               <div className="absolute bottom-4 right-4 rounded-2xl bg-yellow-400 px-4 py-3 text-center text-slate-900 shadow-xl sm:bottom-6 sm:right-6 sm:rounded-3xl sm:px-6 sm:py-5">
-                <div className="text-2xl font-black sm:text-4xl">04+</div>
+                <div className="text-2xl font-black sm:text-4xl">02+</div>
                 <div className="text-xs font-bold sm:text-base">YEARS OF TRUST</div>
               </div>
             </div>
             <div>
-              <h3 className="text-2xl font-black text-slate-900 sm:text-3xl">Shaping the Future of Students Since 2010</h3>
+              <h3 className="text-2xl font-black text-slate-900 sm:text-3xl">Growing with Students Since 2024</h3>
               <p className="mt-5 text-base leading-7 text-slate-600 sm:mt-6 sm:text-lg sm:leading-9">
-                Mahugain Public School, Markaccho is a premier English medium co-educational institution affiliated to the Jharkhand Academic Council (JAC), Ranchi.
+                Mahugain Public School, Markaccho is a growing English medium co-educational institution affiliated to the Jharkhand Academic Council (JAC), Ranchi.
                 We offer quality education from Nursery to Class X with a strong focus on academic growth, character building, and all-round development.
               </p>
               <p className="mt-5 text-base leading-7 text-slate-600 sm:mt-6 sm:text-lg sm:leading-9">
-                With a commitment to holistic development, our school blends academic excellence with extracurricular activities, digital learning, and character building.
+                In a short span of time, our school has built a caring learning environment that blends academic support, extracurricular activities, digital learning, and values.
               </p>
               <div className="mt-6 flex flex-wrap gap-2 sm:mt-8 sm:gap-3">
                 {["JAC Board", "Digital Learning", "Expert Faculty", "Modern Labs", "Sports Facility"].map((item) => (
@@ -151,12 +263,78 @@ export default function Home() {
         </Container>
       </Section>
 
+      <Section className="bg-white" id="teachers">
+        <Container>
+          <SectionTitle
+            eyebrow="Our Team"
+            title="Meet Our Director, Principal & Teachers"
+            description="A dedicated leadership and teaching team that supports students with care, discipline, and quality education."
+          />
+          <div className="mt-10 grid gap-6">
+            <div className="grid gap-6 sm:grid-cols-2">
+              {leadershipTeam.map((person) => (
+                <Card key={person.role} className="hover-lift relative overflow-hidden border-slate-200 bg-slate-50 p-0 shadow-lg">
+                  <div className={`h-2 w-full ${person.accent}`} />
+                  <div className="p-6">
+                  <div className="animate-float relative h-24 w-24 overflow-hidden rounded-3xl border-4 border-white bg-slate-100 shadow-md">
+                      <Image
+                        src={person.photo}
+                        alt={person.name}
+                        fill
+                        className="object-cover"
+                        sizes="96px"
+                      />
+                    </div>
+                    <p className="mt-5 text-sm font-bold uppercase tracking-[0.2em] text-slate-500">{person.role}</p>
+                    <h3 className="mt-2 text-2xl font-black text-slate-900">{person.name}</h3>
+                    <p className="mt-4 text-base leading-7 text-slate-600">{person.description}</p>
+                  </div>
+                </Card>
+              ))}
+            </div>
+
+            <Card className="hover-lift border-slate-200 bg-[linear-gradient(180deg,#ffffff, #f8fafc)]">
+              <p className="text-sm font-bold uppercase tracking-[0.2em] text-[var(--color-primary)]">Teaching Staff</p>
+              <h3 className="mt-3 text-2xl font-black text-slate-900">Our Classroom Mentors</h3>
+              <p className="mt-4 text-base leading-7 text-slate-600">
+                Every teacher plays an important role in helping students build knowledge, confidence, and good values.
+              </p>
+              <div className="mt-6 grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
+                {teachingStaff.map((teacher, index) => (
+                  <div key={`${teacher.subject}-${index}`} className="hover-lift rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
+                    <div className="flex items-center gap-4">
+                      <div className="relative h-14 w-14 overflow-hidden rounded-full border-2 border-slate-100 bg-slate-100">
+                        <Image
+                          src={teacher.photo}
+                          alt={teacher.name}
+                          fill
+                          className="object-cover"
+                          sizes="56px"
+                        />
+                      </div>
+                      <div>
+                        <h4 className="text-base font-black text-slate-900">{teacher.name}</h4>
+                        <p className="text-sm text-slate-500">{teacher.subject}</p>
+                      </div>
+                    </div>
+                    <div className="mt-4 flex items-center justify-between text-sm text-slate-600">
+                      <span>Experience</span>
+                      <span className="font-semibold">{teacher.experience}</span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </Card>
+          </div>
+        </Container>
+      </Section>
+
       <Section className="bg-white" id="academics">
         <Container>
           <SectionTitle eyebrow="Academics" title="Academic Programs" description="Comprehensive education from Nursery to Class X with the JAC curriculum and strong academic support." />
           <div className="mt-10 grid gap-4 sm:grid-cols-2 xl:grid-cols-3 sm:gap-6">
             {academicCards.map((card) => (
-              <article key={card.title} className="overflow-hidden rounded-[28px] border border-slate-200 bg-white shadow-lg">
+              <article key={card.title} className="hover-lift overflow-hidden rounded-[28px] border border-slate-200 bg-white shadow-lg">
                 <div className={`bg-gradient-to-r ${card.color} px-5 py-6 text-white sm:px-6 sm:py-7`}>
                   <h3 className="text-2xl font-black sm:text-3xl">{card.title}</h3>
                   <p className="text-sm text-white/90 sm:text-lg">{card.subtitle}</p>
@@ -179,7 +357,7 @@ export default function Home() {
 
       <Section className="bg-slate-50" id="stats">
         <Container>
-          <div className="rounded-[28px] bg-[var(--color-primary)] px-5 py-8 text-white shadow-xl sm:px-8 sm:py-10 sm:rounded-[32px]">
+          <div className="hover-lift rounded-[28px] bg-[var(--color-primary)] px-5 py-8 text-white shadow-xl sm:px-8 sm:py-10 sm:rounded-[32px]">
             <div className="grid gap-6 lg:grid-cols-[1.2fr_1fr]">
               <div>
                 <h3 className="text-2xl font-black sm:text-3xl">JAC Affiliated School</h3>
@@ -206,7 +384,7 @@ export default function Home() {
           <SectionTitle eyebrow="Admissions Open" title="Admission Process 2026-27" description="Join our family of excellence. Admissions are open for Nursery to Class X." />
           <div className="mt-10 grid gap-4 sm:grid-cols-2 xl:grid-cols-4 sm:gap-6">
             {school.admissionInfo.items.map((step, index) => (
-              <Card key={step} className="text-center">
+              <Card key={step} className="hover-lift text-center">
                 <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-[var(--color-primary)] text-xl font-black text-white sm:h-16 sm:w-16 sm:text-2xl">{String(index + 1).padStart(2, "0")}</div>
                 <div className="mt-5 text-4xl sm:mt-6 sm:text-5xl">📋</div>
                 <h3 className="mt-5 text-xl font-black text-slate-900 sm:mt-6 sm:text-2xl">{step}</h3>
@@ -237,7 +415,7 @@ export default function Home() {
                 "Caste Certificate (if applicable)",
                 "Medical Certificate",
               ].map((item) => (
-                <div key={item} className="rounded-2xl border border-slate-200 bg-white px-4 py-3 text-sm font-medium text-slate-700 shadow-sm sm:px-5 sm:py-4 sm:text-lg">
+                <div key={item} className="hover-lift rounded-2xl border border-slate-200 bg-white px-4 py-3 text-sm font-medium text-slate-700 shadow-sm sm:px-5 sm:py-4 sm:text-lg">
                   ✅ {item}
                 </div>
               ))}
@@ -245,7 +423,7 @@ export default function Home() {
             <div className="mt-8 rounded-[28px] bg-[var(--color-primary)] p-6 text-white sm:p-8">
               <h3 className="text-xl font-black sm:text-2xl">Contact for Admissions</h3>
               <div className="mt-5 grid gap-3 text-sm sm:mt-6 sm:gap-4 sm:text-lg">
-                  <div>📞 +91 9431152170 | +91 7739206148</div>
+                  <div>📞 +91 94311 52170 | +91 77392 06148</div>
                 <div>🌐 https://mahugainpublicschool.example</div>
                 <div>📍 Bazar Road, mahugain, Koderma (Jharkhand) - 825318</div>
               </div>
@@ -334,23 +512,23 @@ export default function Home() {
           <SectionTitle eyebrow="Gallery" title="School Gallery" description="A glimpse into the vibrant school life at Mahugain Public School — from academics to celebrations." />
           <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-12">
             <div className="relative min-h-[220px] overflow-hidden rounded-[24px] sm:min-h-[260px] lg:col-span-8 lg:min-h-[280px]">
-              <Image src="https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=1600&q=80" alt="Event" fill className="object-cover" />
+              <Image src="https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=1600&q=80" alt="Event" fill className="object-cover" sizes="(max-width: 1024px) 100vw, 66vw" />
               <div className="absolute inset-0 bg-black/30" />
             </div>
             <div className="relative min-h-[220px] overflow-hidden rounded-[24px] sm:min-h-[260px] lg:col-span-4 lg:min-h-[280px]">
-              <Image src="https://images.unsplash.com/photo-1529068755536-a5adef0de2b4?auto=format&fit=crop&w=1200&q=80" alt="Sports" fill className="object-cover" />
+              <Image src="https://images.unsplash.com/photo-1547347298-4074fc3086f0?auto=format&fit=crop&w=1200&q=80" alt="Sports" fill className="object-cover" sizes="(max-width: 1024px) 100vw, 33vw" />
               <div className="absolute inset-0 bg-black/30" />
             </div>
             <div className="relative min-h-[220px] overflow-hidden rounded-[24px] sm:min-h-[260px] lg:col-span-4 lg:min-h-[280px]">
-              <Image src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1200&q=80" alt="Academics" fill className="object-cover" />
+              <Image src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1200&q=80" alt="Academics" fill className="object-cover" sizes="(max-width: 1024px) 100vw, 33vw" />
               <div className="absolute inset-0 bg-black/30" />
             </div>
             <div className="relative min-h-[220px] overflow-hidden rounded-[24px] sm:min-h-[260px] lg:col-span-4 lg:min-h-[280px]">
-              <Image src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1200&q=80" alt="Culture" fill className="object-cover" />
+              <Image src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1200&q=80" alt="Culture" fill className="object-cover" sizes="(max-width: 1024px) 100vw, 33vw" />
               <div className="absolute inset-0 bg-black/30" />
             </div>
             <div className="relative min-h-[220px] overflow-hidden rounded-[24px] sm:min-h-[260px] lg:col-span-4 lg:min-h-[280px]">
-              <Image src="https://images.unsplash.com/photo-1497486751825-1233686d5d80?auto=format&fit=crop&w=1200&q=80" alt="Achievement" fill className="object-cover" />
+              <Image src="https://images.unsplash.com/photo-1497486751825-1233686d5d80?auto=format&fit=crop&w=1200&q=80" alt="Achievement" fill className="object-cover" sizes="(max-width: 1024px) 100vw, 33vw" />
               <div className="absolute inset-0 bg-black/30" />
             </div>
           </div>
@@ -375,10 +553,10 @@ export default function Home() {
             <div className="flex min-h-[220px] items-center justify-center overflow-hidden rounded-[24px] border border-slate-200 bg-slate-100 sm:min-h-[280px] lg:min-h-[360px]">
               <div className="text-center">
                 <div className="text-3xl sm:text-4xl">🗺️</div>
-                <div className="mt-3 text-lg font-black text-slate-700 sm:mt-4 sm:text-2xl">Parsabad, Jharkhand, India</div>
+                <div className="mt-3 text-lg font-black text-slate-700 sm:mt-4 sm:text-2xl">Markacho, Jharkhand, India</div>
               </div>
             </div>
-            <div className="rounded-[24px] bg-[var(--color-primary)] p-6 text-white sm:rounded-[28px] sm:p-8">
+            <div className="hover-lift rounded-[24px] bg-[var(--color-primary)] p-6 text-white sm:rounded-[28px] sm:p-8">
               <h3 className="text-2xl font-black sm:text-3xl">{school.name}</h3>
               <div className="mt-6 grid gap-5 text-sm sm:mt-8 sm:gap-6 sm:text-lg">
                 <p><strong className="text-yellow-300">School Type</strong><br />Class X School - JAC Affiliated, Co-Educational, English Medium</p>
