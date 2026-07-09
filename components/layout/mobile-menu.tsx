@@ -10,6 +10,13 @@ export function MobileMenu() {
   const [activeHref, setActiveHref] = useState("/");
 
   useEffect(() => {
+    document.body.style.overflow = open ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [open]);
+
+  useEffect(() => {
     const sections = navigationLinks
       .filter((item) => item.href.startsWith("#"))
       .map((item) => document.querySelector(item.href))
@@ -52,28 +59,60 @@ export function MobileMenu() {
         {open ? "Close" : "Menu"}
       </button>
       {open ? (
-        <div className="absolute left-0 right-0 top-full z-50 mt-3 rounded-2xl border border-slate-200 bg-white p-4 shadow-[0_18px_40px_rgba(15,23,42,0.12)]">
-          <div className="grid gap-3">
-            {navigationLinks.map((item) => (
-              <Link
-                key={item.label}
-                href={item.href}
-                onClick={() => setOpen(false)}
-                aria-current={activeHref === item.href ? "page" : undefined}
-                className={[
-                  "rounded-xl px-4 py-3 text-sm font-semibold transition-colors",
-                  activeHref === item.href ? "bg-blue-600 text-white" : "bg-slate-50 text-slate-700 hover:bg-slate-100 hover:text-slate-900",
-                ].join(" ")}
-              >
-                {item.label}
-              </Link>
-            ))}
-            <Button
-              href="#contact"
-              className="rounded-full bg-[linear-gradient(135deg,#1d4ed8,#2563eb)] py-2.5 text-sm font-semibold text-white shadow-[0_10px_22px_rgba(37,99,235,0.2)] hover:translate-y-[-1px] hover:shadow-[0_14px_28px_rgba(37,99,235,0.24)]"
-            >
-              Enquire <span aria-hidden="true">→</span>
-            </Button>
+        <div className="fixed inset-0 z-50 bg-slate-950/25 backdrop-blur-[2px]">
+          <button
+            aria-label="Close menu backdrop"
+            className="absolute inset-0 h-full w-full cursor-default"
+            onClick={() => setOpen(false)}
+          />
+          <div className="absolute right-0 top-0 h-[100dvh] w-[86vw] max-w-[340px] overflow-hidden rounded-l-[28px] border-l border-slate-200 bg-white shadow-[0_18px_40px_rgba(15,23,42,0.14)]">
+            <div className="bg-[linear-gradient(135deg,#eff6ff,#ffffff)] px-4 py-4">
+              <div className="flex items-center justify-between gap-3">
+                <div>
+                  <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-sky-700">Mahungain Public School</p>
+                  <p className="mt-1 text-xs text-slate-500">Quick Navigation</p>
+                </div>
+                <button
+                  aria-label="Close menu"
+                  className="rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-semibold text-slate-700 shadow-sm"
+                  onClick={() => setOpen(false)}
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+
+            <div className="h-[calc(100dvh-72px)] overflow-y-auto p-4">
+              <div className="grid gap-3">
+                {navigationLinks.map((item) => (
+                  <Link
+                    key={item.label}
+                    href={item.href}
+                    onClick={() => setOpen(false)}
+                    aria-current={activeHref === item.href ? "page" : undefined}
+                    className={[
+                      "rounded-2xl border px-4 py-4 text-sm font-semibold transition-colors",
+                      activeHref === item.href
+                        ? "border-sky-200 bg-sky-50 text-sky-700"
+                        : "border-slate-200 bg-slate-50 text-slate-700 hover:bg-slate-100 hover:text-slate-900",
+                    ].join(" ")}
+                  >
+                    {item.label}
+                  </Link>
+                ))}
+              </div>
+
+              <div className="mt-4 rounded-[24px] bg-[linear-gradient(135deg,#0ea5e9,#2563eb)] p-4 text-white shadow-[0_10px_24px_rgba(37,99,235,0.18)]">
+                <p className="text-xs font-bold uppercase tracking-[0.18em] text-white/70">Need help?</p>
+                <p className="mt-2 text-sm leading-6 text-white/90">Tap enquire if you want admission guidance or school contact details.</p>
+                <Button
+                  href="#contact"
+                  className="mt-4 w-full rounded-full bg-white py-3 text-sm font-bold text-blue-700 shadow-none hover:bg-slate-50"
+                >
+                  Enquire <span aria-hidden="true">→</span>
+                </Button>
+              </div>
+            </div>
           </div>
         </div>
       ) : null}

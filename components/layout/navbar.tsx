@@ -53,7 +53,7 @@ export function Navbar() {
             className={[
               "rounded-full px-4 py-2 text-sm font-semibold transition-all duration-200",
               activeHref === item.href
-                ? "bg-blue-600 text-white shadow-sm shadow-blue-200"
+                ? "bg-sky-50 text-sky-700 shadow-sm"
                 : "text-slate-600 hover:bg-slate-100 hover:text-slate-900",
             ].join(" ")}
           >
@@ -63,7 +63,7 @@ export function Navbar() {
       </div>
       <Button
         href="#contact"
-        className="hidden rounded-full bg-[linear-gradient(135deg,#1d4ed8,#2563eb)] px-5 py-2.5 text-xs font-bold tracking-wide text-white shadow-[0_10px_22px_rgba(37,99,235,0.2)] transition-all duration-200 hover:translate-y-[-1px] hover:shadow-[0_14px_28px_rgba(37,99,235,0.24)] lg:inline-flex"
+        className="hidden rounded-full bg-[linear-gradient(135deg,#0ea5e9,#2563eb)] px-5 py-2.5 text-xs font-bold tracking-wide text-white shadow-[0_10px_22px_rgba(14,165,233,0.2)] transition-all duration-200 hover:translate-y-[-1px] hover:shadow-[0_14px_28px_rgba(14,165,233,0.24)] lg:inline-flex"
       >
         Apply Now <span aria-hidden="true">→</span>
       </Button>
