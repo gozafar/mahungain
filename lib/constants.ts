@@ -27,8 +27,8 @@ export const facilities = [
 export const stats = [
   { value: 98, suffix: "%", label: "Board Pass Rate" },
   { value:300, suffix: "+", label: "Happy Students" },
-  { value: 80, suffix: "+", label: "Qualified Teachers" },
-  { value: 100, suffix: "%", label: "Placement Support" },
+  { value: 18, suffix: "+", label: "Qualified Teachers" },
+  // { value: 100, suffix: "%", label: "Placement Support" },
 ] as const;
 
 export const galleryImages = [

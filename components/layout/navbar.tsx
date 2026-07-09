@@ -44,17 +44,17 @@ export function Navbar() {
 
   return (
     <nav className="flex flex-1 items-center justify-between gap-4">
-      <div className="hidden flex-1 items-center justify-center gap-8 lg:flex">
+      <div className="hidden flex-1 items-center justify-center rounded-full border border-slate-200 bg-white/80 px-3 py-2 shadow-sm backdrop-blur md:gap-2 lg:flex">
         {navigationLinks.map((item) => (
           <Link
             key={item.label}
             href={item.href}
             aria-current={activeHref === item.href ? "page" : undefined}
             className={[
-              "rounded-full px-3 py-2 text-[17px] font-semibold transition-all duration-200",
+              "rounded-full px-4 py-2 text-sm font-semibold transition-all duration-200",
               activeHref === item.href
-                ? "bg-red-800 text-white shadow-md shadow-red-200"
-                : "text-slate-600 hover:bg-red-50 hover:text-red-800",
+                ? "bg-blue-600 text-white shadow-sm shadow-blue-200"
+                : "text-slate-600 hover:bg-slate-100 hover:text-slate-900",
             ].join(" ")}
           >
             {item.label}
@@ -63,7 +63,7 @@ export function Navbar() {
       </div>
       <Button
         href="#contact"
-        className="hidden rounded-full border border-yellow-300 bg-[linear-gradient(135deg,#b91c1c,#7f1d1d)] px-4 py-2 text-xs font-bold tracking-wide text-white shadow-[0_8px_18px_rgba(127,29,29,0.24)] transition-all duration-200 hover:translate-y-[-1px] hover:border-yellow-200 hover:shadow-[0_12px_24px_rgba(127,29,29,0.3)] lg:inline-flex"
+        className="hidden rounded-full bg-[linear-gradient(135deg,#1d4ed8,#2563eb)] px-5 py-2.5 text-xs font-bold tracking-wide text-white shadow-[0_10px_22px_rgba(37,99,235,0.2)] transition-all duration-200 hover:translate-y-[-1px] hover:shadow-[0_14px_28px_rgba(37,99,235,0.24)] lg:inline-flex"
       >
         Apply Now <span aria-hidden="true">→</span>
       </Button>

@@ -73,6 +73,10 @@ a {
   }
 }
 
+.animate-marquee {
+  animation: marquee 34s linear infinite;
+}
+
 @keyframes fade-up {
   from {
     opacity: 0;
@@ -111,5 +115,14 @@ a {
   }
   50% {
     transform: translateY(-8px);
+  }
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
   }
 }
